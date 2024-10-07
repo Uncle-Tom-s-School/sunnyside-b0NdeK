@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.hero {
+    height: 100vh;
+    padding: 2.5rem;
+    background: url(images/desktop/image-header.jpg) center/cover no-repeat;
+    position: relative;
+}
+
+.hero header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero header .mobile-menu {
+    display: none;
+}
+
+.hero header a img {
+    width: 8rem;
+}
+
+.hero header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.hero header nav ul li {
+    list-style: none;
+    margin: 0 1.2rem;
+}
+
+.hero header nav ul li:last-child a {
+    padding: .7rem 1rem;
+    background: #fff;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .3s;
+    font-size: .8rem;
+}
+
+.hero header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+}
+
+.hero header nav ul li:last-child a:hover {
+    background: rgba(255, 255, 255, 0.37);
+    color: #fff;
+}
+
+.hero .header-text {
+    text-align: center;
+}
+
+.hero .header-text h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: .5rem;
+    font-weight: 900;
+    margin: 4rem;
+    font-family: 'Fraunces', serif;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.features article {
+    flex: 1 1 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features .bal-resz {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features .bal-resz .szoveg-blokk {
+    max-width: 70%;
+}
+
+.features .bal-resz h2 {
+    font-size: 2.9rem;
+    margin-bottom: 1.5rem;
+    color: hsl(212, 27%, 19%);
+    font-weight: 900;
+}
+
+.features .bal-resz p,
+.features .bal-resz a {
+    font-family: 'Barlow', sans-serif;
+}
+
+.features .bal-resz a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: .5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.features .bal-resz a::before {
+    content: "";
+    position: absolute;
+    bottom: .3rem;
+    left: 0;
+    width: 100%;
+    height: .7rem;
+    background: hsla(51, 100%, 49%, 0.4);
+    border-radius: .5rem;
+    transition: .35s;
+}
+
+.features .bal-resz a:hover::before {
+    background: hsl(51, 100%, 49%);
+}
+
+.testimonials {
+    padding: 6rem;
+    text-align: center;
+    background: hsla(42, 92%, 90%, 0.19);
+}
+
+.testimonials h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: hsl(210, 4%, 67%);
+    margin-bottom: 3rem;
+    letter-spacing: .3rem;
+}
+
+.testimonials .velemeny-sor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.testimonials .velemeny-oszlop {
+    flex: 1 1 31%;
+    text-align: center;
+}
+
+.galeria {
+    display: flex;
+    height: 70vh;
+}
+
+.galeria picture {
+    flex: 1;
+}
+
+footer {
+    padding: 3rem;
+    background: hsl(168, 32%, 55%);
+    text-align: center;
+}
+
+footer nav a img {
+    filter: invert(1) brightness(0);
+    width: 9rem;
+}
+
+footer nav ul li a {
+    color: hsl(167, 40%, 24%);
+    font-size: 1.1rem;
+    transition: .35s;
+}
+
+footer .jogok {
+    font-size: .9rem;
+}
+
+footer .jogok a {
+    color: hsl(228, 45%, 44%);
+    transition: .35s;
+}
+
+@media (max-width: 991px) {
+    .hero {
+        padding: 1.5rem 1.1rem;
+        background: url(images/mobile/image-header.jpg) center/cover no-repeat;
+    }
+
+    .hero header nav ul {
+        display: none;
+    }
+
+    .hero header .mobile-menu {
+        display: block;
+    }
+
+    .features article {
+        height: 110vh;
+    }
+
+    .features .jobb-resz,
+    .features .bal-resz {
+        flex: 1 1 100%;
+        height: 50vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero .header-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .features .bal-resz p {
+        font-size: .8rem;
+    }
+
+    .testimonials h3 {
+        font-size: .7rem;
+    }
+
+    footer nav ul li a {
+        font-size: .8rem;
+    }
+
+    footer .jogok {
+        font-size: .6rem;
+    }
+}
